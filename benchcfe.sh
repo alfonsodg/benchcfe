@@ -24,6 +24,6 @@ sysbench cpu --threads=2 run | grep 'events per second:\|events (avg/stddev):' >
 fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=test --bs=4k --iodepth=64 --size=4G --readwrite=randrw --rwmixread=75 | grep 'read:\|write:' | awk {'print ($1$2) ($4)'} | sed 's/;//g' | sed "s/([^)]*msec)/ /g" > data_mixed_disk_result_$HN
 cat /proc/cpuinfo > data_cpu_info_$HN
 cat /proc/meminfo > data_mem_info_$HN
-cat df -h > data_disk_info_$HN
+df -h > data_disk_info_$HN
 echo "Tests ended..."
 echo "Please colllect the data* files to fill up the spreadsheet"
