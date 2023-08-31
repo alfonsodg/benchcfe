@@ -6,6 +6,7 @@ apt install fio -y
 apt install sysbench -y
 apt install iperf3 -y
 echo "Starting tests...."
+echo "Current time:"`date`
 HN=`hostname`
 sysbench cpu --threads=2 run | grep 'events per second:\|events (avg/stddev):' > data_cpu_test_1_$HN
 sleep 5
@@ -26,4 +27,5 @@ cat /proc/cpuinfo > data_cpu_info_$HN
 cat /proc/meminfo > data_mem_info_$HN
 df -h > data_disk_info_$HN
 echo "Tests ended..."
+echo "Current time:"`date`
 echo "Please colllect the data* files to fill up the spreadsheet"
