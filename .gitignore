@@ -2,3 +2,4 @@ cpu_test*
 disk_test*
 mixed_*
 data_*
+collect_results/*
