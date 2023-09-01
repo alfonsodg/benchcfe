@@ -34,6 +34,7 @@ The machines were created from scratch and the only tasks they execute are those
     * Azure ARM
     * Google Cloud x86_64
     * Google Cloud ARM
+    * Linode x86_64
 
 
 ## Initial Analysis

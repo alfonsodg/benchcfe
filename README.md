@@ -40,6 +40,12 @@ The generation of the network test does not generate any files, it is done manua
 
 The measure of the benchmark is very simple in this case, you only install install **iperf3** put one host in server mode and another in client mode, as this:
 
+    In the host: sudo iperf3 -s
+    In the client: sudo iperf3 -c IP_FROM_HOST > data_network_CLOUD-PROVIDER-NAME
+
+
+Note this: you need to check your firewall for this and adapt everything to allow the traffic to the port 5201
+
 
 ## Pro tip
 
